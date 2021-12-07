@@ -24,12 +24,8 @@ class Db
     }
     private function connect()
     {
-        $host = DB_HOST;
-        $dbName = DB_NAME;
-        $dbUser = DB_USER;
-        $dbPassword = DB_PASSWORD;
         if (!$this->pdo) {
-            $this->pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbName", "$dbUser","$dbPassword");
+            $this->pdo = new PDO("mysql:host=DB_HOST;port=3307;dbname=DB_NAME", "DB_USER","DB_PASSWORD");
         }
         return $this->pdo;
     }
